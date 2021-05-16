@@ -5,6 +5,7 @@
 #include <vector>
 
 using namespace std;
+using VT = vector<int>;
 
 //Leetcode 198: House Robber		13/5/21			runtme: 0ms, memory: 7.7mb	O(N)
 int maxRob(VT& V) {
@@ -64,8 +65,8 @@ int main()
 {
 	auto t1 = chrono::high_resolution_clock::now();
 
-	vector<int> v = { 1,2,5 };
-	cout << coinChange(v, 11);
+	vector<int> v = { 1,2,5,6,7,8 };
+	cout << maxRob(v);
 
 
 	auto t2 = chrono::high_resolution_clock::now();
