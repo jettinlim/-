@@ -10,10 +10,8 @@
 using namespace std;
 
 //Leetcode 1641: Count Sorted Vowel Strings			18/5/21		runtime: 0ms,	memory: 6.5mb, complexity: O(5n)
-int countVowelStrings(int n) {
-	
+int countVowelStrings(int n) {	
 	vector<vector<int>> vowelMatrix;
-
 	vowelMatrix.push_back({ 1,1,1,1,1 });
 
 	for (int i = 1; i < n; i++) {
