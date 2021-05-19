@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//Leetcode 1641: Count Sorted Vowel Strings			18/5/21		runtime: 0ms,	memory: 6.5mb, complexity: O(cn), while c = number of count 
+//Leetcode 1641: Count Sorted Vowel Strings			18/5/21		runtime: 0ms,	memory: 6.5mb, complexity: O(5n)
 int countVowelStrings(int n) {
 	
 	vector<vector<int>> vowelMatrix;
