@@ -13,6 +13,7 @@ using namespace std;
 int countVowelStrings(int n) {	
 	vector<vector<int>> vowelMatrix;
 	vowelMatrix.push_back({ 1,1,1,1,1 });
+	//vector<vector<int>>dp(n + 1, vector<int>(6));			size customize solution for 2d vector
 
 	for (int i = 1; i < n; i++) {
 		vector<int> temp;
