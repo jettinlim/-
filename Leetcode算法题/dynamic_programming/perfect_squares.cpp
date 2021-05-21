@@ -36,7 +36,7 @@ int main()
 {
 	auto t1 = chrono::high_resolution_clock::now();
 
-	cout << numSquares(10);
+	cout << numSquares(10);	//Up to 10^4
 
 	auto t2 = chrono::high_resolution_clock::now();
 	auto t3 = chrono::duration_cast<chrono::milliseconds>(t2 - t1);
