@@ -20,9 +20,7 @@ struct TreeNode {
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-int travelTree(TreeNode* root, int level = 0) {		//25/5/21		DFS traversal
-
-	string temp = "";
+int travelTree(TreeNode* root, int level = 0) {		//24/5/21	(DFS)
 
 	if (root == NULL)
 		cout << to_string(level) + " none\n";
