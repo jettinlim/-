@@ -41,3 +41,21 @@ vector<int> preorder(Node* root) {
 
 	return result;
 }
+
+int main()
+{
+	auto t1 = chrono::high_resolution_clock::now();
+
+	Node* root = new Node(1, { new Node(3) , new Node(2) , new Node(4) });
+	root->children.at(0) = new Node(3, { new Node(5) , new Node(6) });
+
+	for (int n : preorder(root)) {
+		cout << n << endl;
+	}
+
+	auto t2 = chrono::high_resolution_clock::now();
+	auto t3 = chrono::duration_cast<chrono::milliseconds>(t2 - t1);
+	cout << "\n\nRuntime: " << t3.count() << "ms\n";
+
+	return 0;
+}
