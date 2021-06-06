@@ -37,10 +37,6 @@ int main()
 	root->right->left = new TreeNode(0);
 	root->right->right = new TreeNode(1);
 
-	//N-ary Tree
-	/*Node* root = new Node(1, { new Node(3) , new Node(2) , new Node(4) });
-	root->children.at(0) = new Node(3, { new Node(5) , new Node(6) });*/
-
 	cout << sumRootToLeaf(root);
 
 	auto t2 = chrono::high_resolution_clock::now();
