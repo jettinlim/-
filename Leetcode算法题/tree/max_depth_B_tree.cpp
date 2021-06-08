@@ -7,3 +7,8 @@ int maxDepth(TreeNode* root, int depth = 0) {
 
 	return max(maxDepth(root->right, depth), maxDepth(root->left, depth));
 }
+
+//Leetcode god solution
+int maxDepth2(TreeNode* root) {
+	return root ? max(maxDepth2(root->right), maxDepth2(root->left)) + 1 : 0;
+}
