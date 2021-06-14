@@ -23,7 +23,7 @@ public:
   }
 };
 
-//Solution after
+//Solution without using vector
 TreeNode* prev = NULL;
 bool isValidBST(TreeNode* root) {
     if (!root) return true;
