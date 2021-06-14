@@ -14,6 +14,18 @@ public:
   }
 };
 
+//Solution after
+TreeNode* prev = NULL;
+bool isValidBST(TreeNode* root) {
+    if (!root) return true;
+    bool left = isValidBST(root->left);
+    if(prev && root->val<= prev->val) return false;
+    else prev = root;
+    bool right = isValidBST(root->right);
+    return left && right;
+}
+
+
 //Leetcode god solution
 bool isValidBST(TreeNode* root, TreeNode* minNode, TreeNode* maxNode) {
     if(!root) return true;
