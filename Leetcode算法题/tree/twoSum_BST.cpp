@@ -17,9 +17,7 @@ public:
         if(!root) return false;
         store.push_back(root->val);
         if (existedVector(store, k - root->val)) return true;
-        bool findLeft =  findTarget(root->left, k);
-        bool findRight = findTarget(root->right, k);
-        return findLeft || findRight;       //either one side have the equal sum node
+        return findTarget(root->left, k) || findTarget(root->right, k);       //either one side have the equal sum node
     }
     
     bool existedVector(vector<int>& v, int num){    //check if sum value existed in vector
