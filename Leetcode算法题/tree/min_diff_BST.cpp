@@ -10,6 +10,7 @@ struct TreeNode {
 };
 
 //Leetcode 530: Minimum Absolute Difference in BST		20/6/2021		time: O(2n), space: O(h+n)
+//(same solution)Leetcode 783: Minimum Distance Between BST Nodes		23/6/2021		time: O(2n), space: O(h+n)
 class Solution {
 public:
     int minNum = 10000;
