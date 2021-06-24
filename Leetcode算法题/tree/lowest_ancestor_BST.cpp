@@ -59,3 +59,18 @@ public:
     }
     
 };
+
+//Forgotten it is BST		25/6/2021	time:O(n/2), space: O(1)
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        //if root val larger than both, go right
+        if(root->val > p->val && root->val > q->val)    
+            return lowestCommonAncestor(root->left, p ,q);
+        //if root val smaller than both, go left
+        else if(root->val < p->val && root->val < q->val)
+            return lowestCommonAncestor(root->right, p, q);
+        //if root val between them, this is the lowest common ancestor
+        return root;
+    }
+};
