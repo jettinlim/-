@@ -40,6 +40,7 @@ public:
                 }
             }
             
+	    //check existence in vector
             if(std::find(v.begin(), v.end(), x) != v.end())
             {
               if(std::find(v.begin(), v.end(), y) != v.end())
