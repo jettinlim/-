@@ -27,7 +27,7 @@ public:
                 
                 //current root have both left & right node
                 if(current->left && current->right)
-                    //they are siblings, return false
+                    //they are siblings
                     if (sum-current->left->val==current->right->val || sum-current->right->val==current->left->val) return false;
                 
                 if(current->left){
