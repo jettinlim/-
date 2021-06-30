@@ -15,8 +15,7 @@ public:
     int maxNum = 0;
     int diameterOfBinaryTree(TreeNode* root){
         if (!root) return maxNum;
-        int num = diameterOfSingleNode(root);
-        if(num>maxNum) maxNum = num;
+	maxNum = max(diameterOfSingleNode(root), maxNum);
         diameterOfBinaryTree(root->left);
         diameterOfBinaryTree(root->right);
         return maxNum;
