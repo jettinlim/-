@@ -9,7 +9,7 @@ struct TreeNode {
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-//Leetcode 101: Symmetric Tree		1/7/2021		time&space: O(n)
+//Leetcode 101: Symmetric Tree		1/7/2021		time: O(n), space: O(h)
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
