@@ -15,42 +15,32 @@ public:
     bool isCousins(TreeNode* root, int x, int y) {
         queue<TreeNode*> q;
         q.push(root);
-        int sum = x+y;
-        
-        while(!q.empty()){
+
+        while (!q.empty()) {
             int current_size = q.size();
-            //clear vector
-            vector<int> v = {};
-            for(int i = 0; i < current_size; i++){
+            bool isX = false;
+            bool isY = false;
+
+            for (int i = 0; i < current_size; i++) {
                 TreeNode* current = q.front();
                 q.pop();
-                
+
+                if (current->val == x) isX = true;
+                if (current->val == y) isY = true;
+
                 //current root have both left & right node
-                if(current->left && current->right)
+                if (current->left && current->right)
                     //they are siblings
-                    if (sum-current->left->val==current->right->val || sum-current->right->val==current->left->val) return false;
-                
-                if(current->left){
-                    q.push(current->left);
-                    v.push_back(current->left->val);
-                } 
-                if(current->right){
-                    q.push(current->right);
-                    v.push_back(current->right->val);
-                }
+                    if ((current->left->val == x && current->right->val == y) || (current->left->val == y && current->right->val == x))
+                        return false;
+
+                if (current->left) q.push(current->left);
+                if (current->right) q.push(current->right);
             }
-            
-	    //check existence in vector
-            if(std::find(v.begin(), v.end(), x) != v.end())
-            {
-              if(std::find(v.begin(), v.end(), y) != v.end())
-                {
-                    //Both value are at the same level
-                    return true;
-                } 
-            } 
+
+            if (isX && isY) return true;
         }
-        
+
         return false;
     }
 };
