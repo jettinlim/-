@@ -12,34 +12,24 @@ struct TreeNode {
 class Solution {
 public:
     int deepestLeavesSum(TreeNode* root) {
-        
+        int sum = 0;
         queue<TreeNode*> q;
         
-        if(root) 
-            q.push(root);
+        if(root) q.push(root);
         
         while(!q.empty()){
-            int is_leaf_count = 0;
             int queue_count = q.size();
-            int sum = 0;
+            sum = 0;
             
             for(int i = 0; i < queue_count; i++){
                 TreeNode* current = q.front();
                 q.pop();
-                if(!current->right && !current->left){
-                    is_leaf_count++;
-                    sum += current->val;
-                } 
-                else{
-                    if(current->right) q.push(current->right);
-                    if(current->left) q.push(current->left);
-                }       
+                sum += current->val;
+                if(current->right) q.push(current->right);
+                if(current->left) q.push(current->left);
             }
-            
-            if(is_leaf_count == queue_count) 
-                return sum;
         }
         
-        return 0;
+        return sum;
     }
 };
