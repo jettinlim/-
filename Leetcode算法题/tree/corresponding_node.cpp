@@ -7,7 +7,7 @@ struct TreeNode {
   TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-//Leetcode 1302: Deepest Leaves Sum			7/8/2021			time, space: O(n), BFS
+//Leetcode 1379: Find a Corresponding Node of a Binary Tree in a Clone of That Tree			8/8/2021			time, space: O(h), DFS
 class Solution {
 public:
     TreeNode* temp;
