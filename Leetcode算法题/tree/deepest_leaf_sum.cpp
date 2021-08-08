@@ -9,6 +9,7 @@ struct TreeNode {
 	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
+//Leetcode 1302: Deepest Leaves Sum			7/8/2021			time, space: O(n), BFS
 class Solution {
 public:
     int deepestLeavesSum(TreeNode* root) {
